@@ -1,25 +1,17 @@
-<div class="signup-container">
-    <div class="signup-form">
-      <h2>Sign Up</h2>
-      <form (ngSubmit)="signup()">
-        <mat-form-field appearance="fill">
-          <mat-label>Name</mat-label>
-          <input matInput [(ngModel)]="name" name="name" required>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Mobile</mat-label>
-          <input matInput [(ngModel)]="mob" name="mob" required>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Email</mat-label>
-          <input matInput [(ngModel)]="email" name="email" required>
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label>Password</mat-label>
-          <input matInput type="password" [(ngModel)]="password" name="password" required>
-        </mat-form-field>
-        <button mat-raised-button color="primary" type="submit">Sign Up</button>
-      </form>
-    </div>
-  </div>
-  
+<div class="signup-form">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+        <label for="name">NAME</label>
+        <input id="name" formControlName="name" type="text" placeholder="Enter Your Name"/>
+        <div *ngIf="name.invalid && name.touched" class="error">Name is required</div>
+
+        <label for="email">Email</label>
+        <input id="email" formControlName="email" type="email" placeholder=" Enter Your Email"/>
+        <div *ngIf="email.invalid && email.touched" class="error">Email is required and must be valid</div>
+
+        <label for="password">Password</label>
+        <input id="password" formControlName="password" type="password" placeholder=" Enter Password"/>
+        <div *ngIf="password.invalid && password.touched" class="error">Password is required and must be valid</div>
+
+        <button type="submit" [disabled]="signupForm.invalid">SignUp</button>
+    </form>
+</div>

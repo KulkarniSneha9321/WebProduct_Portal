@@ -19,14 +19,14 @@ export class LoginComponent implements OnInit{
     });
   }
   ngOnInit(): void {}
-  
+
     get email(){
       return this.loginForm.get('email');
     }
     get password(){
       return this.loginForm.get('password');
     }
-    onsubmit(){
+    onSubmit(){
       if(this.loginForm.valid){
         this.authService.login(this.loginForm.value).subscribe(()=>{
           this.router.navigate(['/dashboard']);
