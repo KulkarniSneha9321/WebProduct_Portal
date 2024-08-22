@@ -1,10 +1,15 @@
 <app-header (searchEvent)="searchProducts($event)"></app-header>
 <app-filter (onFilter)="FilterProducts($event)"></app-filter>
-
 <div class="product-list">
-    <div class="pro-card" *ngFor="let product of filterProducts" (click)="viewProductDetails(product.id)">
-        <img [src]="../assets/airpo.jpg" alt="{{product.name}}" class="product-img"/>
-        <div class="product-details"></div>
+    <div class="product-card" *ngFor="let product of filterProducts" (click)="viewProductDetails(product.id)">
+        <img [src]="product.image" alt="{{product.name}}" class="product-img"/>
+        <div class="product-details">
+            <h3>{{product.name}}</h3>
+            <p>{{product.description | slice:0.100}}</p>
+            <p><strong>Price:</strong> ${{product.price}}</p>
+            <p><strong>Rating:</strong> ${{product.raying}}⭐</p>
+            <p><strong>Delivery Days:</strong>{{product.deliveryDays}}</p>
+        </div>
     </div>
 </div>
    

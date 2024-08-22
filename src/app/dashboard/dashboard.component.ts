@@ -1,7 +1,8 @@
 // dashboard.component.ts
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../services/product/product.service';
-import { Product } from '../models/product.model';
+import { Router } from '@angular/router';
+import { ProductService } from '../product.service';
+import { query } from '@angular/animations';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,16 +10,16 @@ import { Product } from '../models/product.model';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  products: Product[] = [];
-  filteredProducts: Product[] = [];
-
-  constructor(private productService: ProductService) { }
+  products:any[]:[];
+  filteredProducts:any[]=[];
+  constructor(private productService:ProductService, private router:Router){}
 
   ngOnInit(): void {
-    this.products = this.productService.getProducts();
-    this.filteredProducts = this.products;
+    this.productService.getProducts().subscribe(products =>{
+      this.products = products;
+      this.filteredProducts=products;
+    });
   }
-
   filterProducts(criteria: { price?: number; seller?: string; rating?: number }): void {
     this.filteredProducts = this.products.filter(product => {
       return (!criteria.price || product.price <= criteria.price) &&
@@ -26,8 +27,18 @@ export class DashboardComponent implements OnInit {
              (!criteria.rating || product.rating >= criteria.rating);
     });
   }
-
-  onSearch(query: string): void {
-    this.filteredProducts = this.products.filter(product => product.name.toLowerCase().includes(query.toLowerCase()));
+  searchProducts(query:string){
+    if(query){
+      this.filteredProducts=this.products.filter(product =>
+        product.name.toLowerCase().includes(query.toLowerCase())
+      );
+    }else{
+      this.filteredProducts=this.products;
+    }
   }
-}
+
+  viewProductDetails(productId:number){
+    this.router.navigate(['/product',productId]);
+  
+
+}}
