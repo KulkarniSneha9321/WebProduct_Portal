@@ -1,80 +1,15 @@
-<div class="container">
-    <form [formGroup]="loginForm" (ngSubmit)="submitform()">
-        <div class="logo">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137 60" width="137" height="60">
-                <path d="M68.5 0C30.7 0 0 30.7 0 68.5S30.7 137 68.5 137 137 106.3 137 68.5 106.3 0 68.5 0zm0 127C34.5 127 10 102.5 10 68.5S34.5 10 68.5 10 127 34.5 127 68.5 102.5 127 68.5 127z"/>
-                <path d="M68.5 34.5a34 34 0 100 68 34 34 0 000-68zm0 58a24 24 0 110-48 24 24 0 010 48z"/>
-              </svg>
-              
-        </div>
-        <div style="display: flex;">
-            <div class="left">
-                <p class="heading">Sign in
-                <p>
-                <div>Use your E-Web Portal</div>
-            </div>
-            <div class="right">
-                <div>
-                    <mat-form-field class="example-full-width" appearance="outline" color=primary>
-                        <mat-label>Email or Phone</mat-label>
-                        <input matInput placeholder="Email" formControlName="email">
-                    </mat-form-field>
-                    <div *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
-                        style="color: red; margin-left: 5px;">
-                        Please provide a valid email address.
-                    </div>
-                    <mat-form-field class="example-full-width" appearance="outline" color=primary>
-                        <mat-label>Password</mat-label>
-                        <input matInput placeholder="Password" formControlName="password">
-                    </mat-form-field>
-                    <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)" style="color: red; margin-left: 5px;">Please provide a valid Password</div>
-                    <div class="button-3">
-                        <span>Forgot email?</span>
-                    </div>
-                </div>
-                <div class="info">
-                    <div class="msg">
-                        Not your computer? Use Guest mode to sign in privately.
-                    </div>
-                    <div class="button-3 learn-txt">
-                        <span>Learn more about using Guest mode</span>
-                    </div>
-                </div>
-
-                <div class="button-class">
-                    <button mat-button color=primary class="create-button" (click)="openNewAccount($event)">Create
-                        account</button>
-                    <mat-card id="newcard">
-                        <div style="display: flex;flex-direction: column;  justify-content: end">
-                            <div class="newcarditem">
-                                <a style="text-decoration: none; color: black;" [routerLink]="['/register']">For
-                                    personal use</a>
-                            </div>
-                            <div class="newcarditem">
-                                <a>For my child</a>
-                            </div>
-                            <div class="newcarditem">
-                                <a>For work and my business</a>
-                            </div>
-                        </div>
-                    </mat-card>
-                    <button mat-raised-button color="primary" class="button button-next" type="submit"
-                        >Next</button>
-                </div>
-            </div>
-
-        </div>
+<div>
+    <h2>Login</h2>
+    <form (ngSubmit)="login()">
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="email" name="email" required>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="password" name="password" required>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Login</button>
     </form>
-</div>
-
-<div class="box-footer">
-    <div>
-        <mat-select placeholder="English (United States)">
-        </mat-select>
-    </div>
-    <div>
-        <button class="footer-button">Help</button>
-        <button class="footer-button">Privacy</button>
-        <button class="footer-button">Terms</button>
-    </div>
-</div>
+  </div>
+  
