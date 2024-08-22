@@ -12,13 +12,27 @@ import { FormGroup, FormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeaderComponent } from './header/header.component';
+import { FilterComponent } from './filter/filter.component';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent,
+    HeaderComponent,
+    FilterComponent,
+    ProductListComponent,
+    ProductCardComponent,
+    ProductDetailsComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

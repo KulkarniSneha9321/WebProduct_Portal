@@ -1,0 +1,46 @@
+{
+    "users":[
+        {
+            "id":1,
+            "name":"ABC",
+            "mob":"123456789",
+            "email":"abc@samp.com",
+            "password":"pass1"
+        }
+    ],
+    "products":[
+        {
+            "id":1,
+            "name":"Airpods121v2",
+            "description":"Amazing Product by Boat",
+            "rating":4.9,
+            "price":1200.00,
+            "delivaryDays":1,
+            "reviews":["Great Product!!!","Worth of price"],
+            "image":"assests/airo.jpg"
+
+        },
+        {
+            "id":2,
+            "name":"Rockers370",
+            "description":"Amazing Product by Boat",
+            "rating":4.8,
+            "price":1000.00,
+            "delivaryDays":2,
+            "reviews":["Great Product!!!","Worth of price"],
+            "image":"assests/Rockers370.jpg"
+
+        },
+        {
+            "id":3,
+            "name":"Airpods131",
+            "description":"Amazing Product by Boat",
+            "rating":4.0,
+            "price":700.00,
+            "delivaryDays":3,
+            "reviews":["Great Product!!!","Worth of price"],
+            "image":"assests/airpods131.jpg"
+
+        }
+    ]
+}
