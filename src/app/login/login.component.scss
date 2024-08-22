@@ -1,0 +1,149 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Gill Sans', roboto,"Noto Sans Myanmar UI",arial, sans-serif;
+    font-weight: 400;
+}
+.logo{
+    margin-left: 10px;
+}
+.form{
+    background-color: white;
+    border: 1px solid wheat;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 70px;
+    border-radius: 20px;
+    padding: 15px;
+    height: 350px;
+    box-shadow: 2px 2px 2px 2px rgb(192,191,191);
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    width: 50%;
+}
+.heading{
+    font-size: var(--wf-tfs-bp3,2.25rem);
+    line-height: 1.2222222222;
+    font-weight: 400;
+}
+mat-form-field{
+    margin-left: 7px;
+    width: 90%;
+    margin-bottom: 5px;
+}
+mat-button{
+    padding: 0px !important;
+}
+.info{
+    margin-top: 25px;
+    width: 90%;
+}
+.msg{
+    margin-left: 7px;
+}
+::ng-deep .mat-mdc-form-field-subscript-wrapper{
+    height: 0px;
+}
+.button-class{
+    width: 90%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 20px;
+}
+.button-next{
+    border-radius: 20px;
+    color: rgb(78,221,71);
+    background-color: rgb(71,71,221) !important;
+    color: white !important;
+}
+.button-next:hover{
+    background-color: rgb(13, 13, 230) !important;
+    color: white !important;
+}
+.button-3{
+    padding-left: 7px;
+    margin-top: 7px;
+    color: rgb(71,71,221);
+}
+.button-3:hover{
+    cursor: pointer;
+}
+.button-next{
+    background-color: rgb(78,221,71);
+}
+.create-button {
+    color: rgb(71, 71, 221) !important;
+}
+
+.create-button:hover {
+    border-radius: 20px;
+    background-color: white !important;
+}
+
+.learn-txt {
+    margin-top: 0px;
+}
+
+
+//footer
+.box-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px !important;
+    color: #1f1f1f !important;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 19.5%;
+    margin-right: 19.5%;
+    margin-top: 2%;
+}
+
+.footer-button {
+    justify-content: space-evenly;
+    color: #1f1f1f !important;
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    gap: 30px;
+    padding: 10px;
+}
+
+.footer-button:not(:hover) {
+    background-color: transparent;
+
+}
+mat-select{
+    width: 170px;
+    font-size: 12px;
+    margin-left: 8px;
+}
+mat-option{
+    font-size: 12px;
+    width: 100%;
+}
+
+#newcard{
+    display:none;
+    background-color: #e0e7f1 ;
+    width:220px;
+    position: fixed;
+    right: 24%;
+    top: 40%;
+    padding:10px;
+    z-index: 1000;
+    color:#1f1f1f;
+    border-radius: 20px;
+}
+.newcarditem{
+    height:30px;
+    padding:7px 0px 2.3px 10px;
+   
+}
