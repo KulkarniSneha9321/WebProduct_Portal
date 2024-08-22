@@ -15,9 +15,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { FilterComponent } from './filter/filter.component';
-import { ProductListComponent } from './product-list/product-list.component';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 
@@ -29,9 +26,6 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     DashboardComponent,
     HeaderComponent,
     FilterComponent,
-    ProductListComponent,
-    ProductCardComponent,
-    ProductDetailsComponent,
     ProductDetailComponent
   ],
   imports: [

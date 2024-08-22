@@ -1,1 +1,6 @@
-<p>header works!</p>
+<div class="header">
+    <h1>Product Web Portal</h1>
+    <div class="search-bar">
+        <input type="text" [(ngModel)]="searchQuery" (ngModelChange)="onSearch()" placeholder="Search products......."/>
+    </div>
+</div>

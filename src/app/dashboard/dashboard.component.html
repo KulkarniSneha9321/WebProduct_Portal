@@ -1,1 +1,11 @@
+<app-header (searchEvent)="searchProducts($event)"></app-header>
+<app-filter (onFilter)="FilterProducts($event)"></app-filter>
+
+<div class="product-list">
+    <div class="pro-card" *ngFor="let product of filterProducts" (click)="viewProductDetails(product.id)">
+        <img [src]="../assets/airpo.jpg" alt="{{product.name}}" class="product-img"/>
+        <div class="product-details"></div>
+    </div>
+</div>
+   
 
