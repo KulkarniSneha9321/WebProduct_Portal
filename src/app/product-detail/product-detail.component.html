@@ -1,7 +1,18 @@
 <div class="product-detail">
     <img [src]="product.image" alt="{{product.name}}" class="product-image-details"/> 
     <div class="product-info">
-        <h2>{{product.name}}</h2>
-        <p></p>
+        <h3>{{product.name}}</h3>
+        <p>{{product.description}}</p>
+        <p><strong>Price:</strong> ${{product.price}}</p>
+        <p><strong>Rating:</strong> ${{product.raying}}⭐</p>
+        <p><strong>Delivery Days:</strong>{{product.deliveryDays}}</p>
+        <h4>Reviews: </h4>
+        <ul>
+            <li *ngFor="let review of product.reviews">{{review}}</li>
+        </ul>
+        <div class="review-form">
+            <input [(ngModel)]="newReview" placeholder="Add a review"/>
+            <button (click)="addReview()">Submit Review</button>
+        </div>
     </div>
 </div>
