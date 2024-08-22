@@ -24,4 +24,8 @@ export class LoginComponent {
       alert('Invalid credentials');
     }
   }
+  signup():void{
+    this.router.navigate(['/signup']);
+  }
+
 }

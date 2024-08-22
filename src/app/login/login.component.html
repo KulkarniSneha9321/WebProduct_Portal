@@ -1,7 +1,7 @@
 <div class="login-container">
     <div class="login-form">
     <h2>Portal Login Page</h2>
-    <form (ngSubmit)="login()">
+    <form (ngSubmit)="login()" (ngReset)="signup()">
       <mat-form-field>
         <mat-label>Email</mat-label>
         <input matInput [(ngModel)]="email" name="email" required>
@@ -11,6 +11,8 @@
         <input matInput type="password" [(ngModel)]="password" name="password" required>
       </mat-form-field>
       <button mat-raised-button color="primary" type="submit">Login</button>
+      <button mat-raised-button color="primary" type="reset">Signup</button>
+
     </form>
     </div>
   </div>
