@@ -2,15 +2,15 @@
     <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
         <label for="name">NAME</label>
         <input id="name" formControlName="name" type="text" placeholder="Enter Your Name"/>
-        <div *ngIf="name.invalid && name.touched" class="error">Name is required</div>
+        <div *ngIf="name?.invalid && name?.touched" class="error">Name is required</div>
 
         <label for="email">Email</label>
         <input id="email" formControlName="email" type="email" placeholder=" Enter Your Email"/>
-        <div *ngIf="email.invalid && email.touched" class="error">Email is required and must be valid</div>
+        <div *ngIf="email?.invalid && email?.touched" class="error">Email is required and must be valid</div>
 
         <label for="password">Password</label>
         <input id="password" formControlName="password" type="password" placeholder=" Enter Password"/>
-        <div *ngIf="password.invalid && password.touched" class="error">Password is required and must be valid</div>
+        <div *ngIf="password?.invalid && password?.touched" class="error">Password is required and must be valid</div>
 
         <button type="submit" [disabled]="signupForm.invalid">SignUp</button>
     </form>
