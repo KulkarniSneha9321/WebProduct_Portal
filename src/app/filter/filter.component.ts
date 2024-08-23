@@ -1,4 +1,5 @@
 import { Component,Output,EventEmitter } from '@angular/core';
+import { FormBuilder,FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-filter',
@@ -6,10 +7,17 @@ import { Component,Output,EventEmitter } from '@angular/core';
   styleUrls: ['./filter.component.scss']
 })
 export class FilterComponent {
-  @Output() filterChange = new EventEmitter<{price?: number; seller?:string; rating?: number}>();
-  onFilterChange(type: string,value:any):void{
-    const criteria={[type]:value};
-    this.filterChange.emit(criteria);
-  }
+  @Output() filterChange = new EventEmitter<any>();
+  filterForm:FormGroup;
 
+  constructor(private fb:FormBuilder){
+    this.filterForm = this.fb.group({
+      price:[''],
+      rating:[''],
+      deliveryDays:['']
+    });
+  }
+  applyFilter(){
+    this.filterChange.emit(this.filterForm.value);
+  }
 }

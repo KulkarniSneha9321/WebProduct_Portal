@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductService } from '../product.service';
-import { query } from '@angular/animations';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +10,7 @@ import { query } from '@angular/animations';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  products:any[]:[];
+  products:any[]=[];
   filteredProducts:any[]=[];
   constructor(private productService:ProductService, private router:Router){}
 

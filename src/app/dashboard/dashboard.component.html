@@ -1,7 +1,7 @@
 <app-header (searchEvent)="searchProducts($event)"></app-header>
-<app-filter (onFilter)="FilterProducts($event)"></app-filter>
+<app-filter (onFilter)="filterProducts($event)"></app-filter>
 <div class="product-list">
-    <div class="product-card" *ngFor="let product of filterProducts" (click)="viewProductDetails(product.id)">
+    <div class="product-card" *ngFor="let product of filteredProducts" (click)="viewProductDetails(product.id)">
         <img [src]="product.image" alt="{{product.name}}" class="product-img"/>
         <div class="product-details">
             <h3>{{product.name}}</h3>

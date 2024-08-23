@@ -1,1 +1,18 @@
-<p>filter works!</p>
+<div class="filter-container">
+    <form [formGroup]="filterForm" (ngSubmit)="applyFilter()">
+        <div class="filter-group">
+            <label for="price">Price</label>
+            <input id="price" type="number" formControlName="price" placeholder="Enter max price">
+        </div>
+        <div class="filter-group">
+            <label for="rating">Rating</label>
+            <input id="rating" type="number" formControlName="rating" placeholder="Enter min Rating" min="1" max="5">
+        </div>
+        <div class="filter-group">
+            <label for="deliveryDays">DeliveryDays</label>
+            <input id="deliveryDays" type="number" formControlName="deliveryDays" placeholder="Max Delivery Days">
+        </div>
+        <button type="submit">Apply Filter</button>
+
+    </form>
+</div>
