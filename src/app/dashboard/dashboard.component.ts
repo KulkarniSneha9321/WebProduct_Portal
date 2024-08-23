@@ -20,11 +20,11 @@ export class DashboardComponent implements OnInit {
       this.filteredProducts=products;
     });
   }
-  filterProducts(criteria: { price?: number; seller?: string; rating?: number }): void {
+  onFilterChange(filter:any) {
     this.filteredProducts = this.products.filter(product => {
-      return (!criteria.price || product.price <= criteria.price) &&
-             (!criteria.seller || product.seller === criteria.seller) &&
-             (!criteria.rating || product.rating >= criteria.rating);
+      return (!filter.price || product.price <= filter.price) &&
+             (!filter.seller || product.seller === filter.seller) &&
+             (!filter.rating || product.rating >= filter.rating);
     });
   }
   searchProducts(query:string){
