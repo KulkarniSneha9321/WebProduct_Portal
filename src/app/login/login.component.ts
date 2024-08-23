@@ -33,6 +33,10 @@ export class LoginComponent implements OnInit{
         });
       }
     }
+    handleSignUp(){
+      console.log("signing")
+      this.router.navigate(['signup'])
+    }
     
   
   

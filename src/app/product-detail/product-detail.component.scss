@@ -20,7 +20,7 @@
         padding: 0;
 
         li{
-            background: #f8f9fa;
+            background: #7c7c7c;
             padding: 10px;
             margin: 5px 0;
             border-radius: 5px;
@@ -34,19 +34,19 @@
             flex: 1;
             padding: 10px;
             margin-right: 10px;
-            border: 1px solid #ccc;
+            border: 1px solid #030303;
             border-radius: 5px;
         }
         button{
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #e9edf1;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
 
             &:hover{
-                background-color: #0056b3;
+                background-color: #939699;
             }
         }
     }
