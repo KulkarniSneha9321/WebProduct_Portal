@@ -1,7 +1,7 @@
 // dashboard.component.ts
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductService } from '../product.service';
+import { ProductService } from '../services/product.service';
 
 
 @Component({
